@@ -1,6 +1,8 @@
 # Data Analysis Web Application
 
-A Django-based web application for data analysis and machine learning algorithm suggestions. This application allows users to upload CSV/Excel files, visualize data, get statistical insights, and receive ML algorithm recommendations.
+A Django-based web application for data analysis and machine learning algorithm suggestions. 
+
+This application allows users to upload CSV/Excel files, visualize data, get statistical insights, and receive ML algorithm recommendations.
 
 ## Features
 
@@ -52,8 +54,8 @@ A Django-based web application for data analysis and machine learning algorithm 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/data-analysis-webapp.git
-cd data-analysis-webapp
+git clone git@github.com:SaberHardy/AlgoWizardProject.git
+cd AlgoWizardProject
 ```
 
 2. Create and activate a virtual environment:
