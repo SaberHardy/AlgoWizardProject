@@ -1,0 +1,113 @@
+:root {
+    --sidebar-width: 240px;
+    --navbar-height: 60px;
+    --primary-color: #4e73df;
+    --secondary-color: #858796;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f8f9fc;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    bottom: 0;
+    width: var(--sidebar-width);
+    background: white;
+    box-shadow: 0 0.15rem 1.75rem rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    transition: all 0.3s;
+}
+
+.sidebar-hidden .sidebar {
+    margin-left: calc(-1 * var(--sidebar-width));
+}
+
+/* Navbar Styles */
+.navbar {
+    height: var(--navbar-height);
+    box-shadow: 0 0.15rem 1.75rem rgba(0, 0, 0, 0.15);
+    background: white !important;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: var(--sidebar-width);
+    margin-top: var(--navbar-height);
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+.sidebar-hidden .main-content {
+    margin-left: 0;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    box-shadow: 0 0.15rem 1.75rem rgba(0, 0, 0, 0.15);
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    background-color: white;
+    border-bottom: 1px solid #e3e6f0;
+}
+
+/* Upload Area Styles */
+.upload-area {
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.upload-area:hover {
+    border-color: var(--primary-color);
+}
+
+/* Progress Bar Styles */
+.progress {
+    height: 0.5rem;
+    margin: 1rem 0;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        margin-left: calc(-1 * var(--sidebar-width));
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .sidebar-active .sidebar {
+        margin-left: 0;
+    }
+}
